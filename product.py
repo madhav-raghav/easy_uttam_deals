@@ -30,6 +30,7 @@ from datetime import datetime, timedelta
 class product_template(osv.osv):
     _inherit = ['product.template']
     _columns = {
+                'bv':fields.float('BV'),
                 'is_free_product':fields.boolean('Is Extra Products'),
                 }
 product_template()

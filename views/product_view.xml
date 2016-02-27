@@ -6,6 +6,11 @@
             <field name="model">product.template</field>
             <field name="inherit_id" ref="product.product_template_form_view"/>
             <field name="arch" type="xml">
+                <xpath expr="//div[@name='options']" position="after">
+                    <group>
+                        <field name="bv"/>
+                    </group>
+                </xpath>
                 <xpath expr="//field[@name='description_sale']" position="before">
                     <group>
                         <field name="is_free_product" attrs="{'invisible': [('is_free_product','!=', True)]}" readonly="1"/>
